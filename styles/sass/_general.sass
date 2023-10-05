@@ -1,9 +1,77 @@
+@use 'variables'
+
 body
   font-family: 'Inter', sans-serif
+  background: variables.$off-white
+
+.container
+  max-width: 1100px
+  margin: 0 auto
+  padding: 0 16px
+
+img
+  max-width: 100%
 
 h1, h2, h3, h4, h5, h6
   font-weight: 800
 
-h1
+h1 // XL
   font-size: 56px
   line-height: 56px
+  color: variables.$space-blue
+
+h2 // L
+  font-size: 40px
+  line-height: 40px
+  color: variables.$light-orange
+
+h3 // M 
+  font-size: 32px
+  line-height: 32px
+  color: variables.$light-grey
+
+h4 // S 
+  font-size: 20px
+  line-height: 24px
+  color: variables.$light-grey
+
+  &:hover
+    color: variables.$light-orange
+
+h5 // XS 
+    font-size: 18px
+    line-height: 24px
+    color: variables.$space-blue
+
+    &:hover
+      color: variables.$light-red
+
+li, p
+  font-weight: 400
+  font-size: 15px
+  line-height: 26px
+  color: variables.$dark-grey
+
+ul
+  padding: 0
+
+li
+  list-style: none
+
+  &:hover
+    color: variables.$light-red
+
+button
+  width: 185px
+  height: 48px
+  background: variables.$light-red
+  border: none
+  font-weight: 700
+  font-size: 14px
+  line-height: 24px
+  color: variables.$off-white
+  letter-spacing: 4.375px
+  text-transform: uppercase
+
+  &:hover
+    background: variables.$space-blue
