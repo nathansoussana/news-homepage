@@ -311,7 +311,7 @@ body {
 }
 
 .container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 16px;
 }
@@ -320,29 +320,29 @@ img {
   max-width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 800;
-}
-
 h1 {
+  font-weight: 800;
   font-size: 56px;
   line-height: 56px;
   color: #00001A;
 }
 
 h2 {
+  font-weight: 700;
   font-size: 40px;
   line-height: 40px;
   color: #E9AA52;
 }
 
 h3 {
+  font-weight: 800;
   font-size: 32px;
   line-height: 32px;
   color: #C5C6CE;
 }
 
 h4 {
+  font-weight: 800;
   font-size: 20px;
   line-height: 24px;
   color: #C5C6CE;
@@ -352,6 +352,7 @@ h4:hover {
 }
 
 h5 {
+  font-weight: 800;
   font-size: 18px;
   line-height: 24px;
   color: #00001A;
@@ -389,9 +390,16 @@ button {
   color: #FFFDFA;
   letter-spacing: 4.375px;
   text-transform: uppercase;
+  cursor: pointer;
 }
 button:hover {
   background: #00001A;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .container_navbar {
@@ -407,6 +415,90 @@ button:hover {
 
 .navbar_menu_item {
   margin-left: 40px;
+}
+
+.container_content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 3fr 1fr;
+  grid-template-areas: "her her new" "her her new" "her her new" "num num num";
+  gap: 30px;
+}
+
+.hero {
+  grid-area: her;
+}
+
+.hero_content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.hero_content_title_title {
+  margin: 28px 0;
+}
+
+.hero_content_desc_text {
+  margin: 0 0 28px;
+}
+
+.new {
+  grid-area: new;
+  background: #00001A;
+  padding: 32px 24px;
+}
+
+.new_title {
+  margin: 0;
+}
+
+.new_article_title {
+  margin: 0 0 8px;
+  color: #FFFDFA;
+}
+
+.new_article_text {
+  margin: 0;
+  color: #C5C6CE;
+}
+
+.new_article {
+  margin: 30px 0;
+}
+
+.new_separation {
+  margin: 0;
+  border-color: #5E607A;
+}
+
+.numbered {
+  grid-area: num;
+  display: flex;
+  gap: 30px;
+}
+
+.numbered_article {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.numbered_article_img {
+  width: 100px;
+  height: 130px;
+}
+
+.numbered_article_content_number {
+  margin: 0;
+}
+
+.numbered_article_content_title {
+  margin: 12px 0 9px;
+}
+
+.numbered_article_content_text {
+  margin: 0;
 }
 
 /*# sourceMappingURL=index.css.map */

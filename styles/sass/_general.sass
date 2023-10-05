@@ -5,32 +5,33 @@ body
   background: variables.$off-white
 
 .container
-  max-width: 1100px
+  max-width: 1200px
   margin: 0 auto
   padding: 0 16px
 
 img
   max-width: 100%
 
-h1, h2, h3, h4, h5, h6
-  font-weight: 800
-
 h1 // XL
+  font-weight: 800
   font-size: 56px
   line-height: 56px
   color: variables.$space-blue
 
 h2 // L
+  font-weight: 700
   font-size: 40px
   line-height: 40px
   color: variables.$light-orange
 
 h3 // M 
+  font-weight: 800
   font-size: 32px
   line-height: 32px
   color: variables.$light-grey
 
 h4 // S 
+  font-weight: 800
   font-size: 20px
   line-height: 24px
   color: variables.$light-grey
@@ -39,12 +40,13 @@ h4 // S
     color: variables.$light-orange
 
 h5 // XS 
-    font-size: 18px
-    line-height: 24px
-    color: variables.$space-blue
+  font-weight: 800
+  font-size: 18px
+  line-height: 24px
+  color: variables.$space-blue
 
-    &:hover
-      color: variables.$light-red
+  &:hover
+    color: variables.$light-red
 
 li, p
   font-weight: 400
@@ -72,6 +74,12 @@ button
   color: variables.$off-white
   letter-spacing: 4.375px
   text-transform: uppercase
+  cursor: pointer
 
   &:hover
     background: variables.$space-blue
+
+a
+  color: inherit
+  text-decoration: none
+  cursor: pointer

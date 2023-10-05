@@ -1,0 +1,76 @@
+@use '../variables'
+
+// Grid
+
+.container_content
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  grid-template-rows: 3fr 1fr
+  grid-template-areas: "her her new" "her her new" "her her new" "num num num"
+  gap: 30px
+
+// Hero
+
+.hero
+  grid-area: her
+
+.hero_content
+  display: flex
+  align-items: center
+  gap: 30px
+
+.hero_content_title_title
+  margin: 28px 0
+
+.hero_content_desc_text
+  margin: 0 0 28px
+
+// New
+
+.new
+  grid-area: new
+  background: variables.$space-blue
+  padding: 32px 24px
+
+.new_title
+  margin: 0
+
+.new_article_title
+  margin: 0 0 8px
+  color: variables.$off-white
+
+.new_article_text
+  margin: 0
+  color: variables.$light-grey
+
+.new_article
+  margin: 30px 0
+
+.new_separation
+  margin: 0
+  border-color: variables.$dark-grey
+
+// Num
+
+.numbered
+  grid-area: num
+  display: flex
+  gap: 30px
+
+.numbered_article
+  display: flex
+  align-items: center
+  gap: 20px
+
+.numbered_article_img
+  width: 100px
+  height: 130px
+
+.numbered_article_content_number
+  margin: 0
+
+.numbered_article_content_title
+  margin: 12px 0 9px
+  
+.numbered_article_content_text
+  margin: 0
