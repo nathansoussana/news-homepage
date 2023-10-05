@@ -406,7 +406,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 89px 16px 55px;
+  padding: 60px 16px;
 }
 
 .navbar_menu {
@@ -420,9 +420,9 @@ a {
 .container_content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 3fr 1fr;
+  grid-template-rows: auto;
   grid-template-areas: "her her new" "her her new" "her her new" "num num num";
-  gap: 30px;
+  gap: 60px 30px;
 }
 
 .hero {
@@ -450,7 +450,7 @@ a {
 }
 
 .new_title {
-  margin: 0;
+  margin: 0 0 5px;
 }
 
 .new_article_title {
@@ -476,12 +476,14 @@ a {
   grid-area: num;
   display: flex;
   gap: 30px;
+  flex-wrap: wrap;
 }
 
 .numbered_article {
   display: flex;
   align-items: center;
   gap: 20px;
+  flex: 1 1 350px;
 }
 
 .numbered_article_img {
@@ -499,6 +501,33 @@ a {
 
 .numbered_article_content_text {
   margin: 0;
+}
+
+@media screen and (max-width: 1120px) {
+  .container_content {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "her her her new new" "her her her new new" "her her her new new" "num num num num num";
+  }
+  .hero_content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+}
+@media screen and (max-width: 900px) {
+  .container_content {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "her her" "new num";
+  }
+}
+@media screen and (max-width: 740px) {
+  .container_content {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "her" "new" "num";
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
