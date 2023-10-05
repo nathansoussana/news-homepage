@@ -313,7 +313,7 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 16px 16px;
+  padding: 0 16px 32px;
 }
 
 img {
@@ -402,11 +402,17 @@ a {
   cursor: pointer;
 }
 
+@media screen and (max-width: 915px) {
+  h1 {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
 .container_navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 60px 16px;
+  padding: 32px 16px;
 }
 
 .navbar_menu {
@@ -417,6 +423,18 @@ a {
   margin-left: 40px;
 }
 
+.navbar_hamburger {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar_menu {
+    display: none;
+  }
+  .navbar_hamburger {
+    display: block;
+  }
+}
 .container_content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -506,7 +524,6 @@ a {
 @media screen and (max-width: 1120px) {
   .container_content {
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: auto;
     grid-template-areas: "her her her new new" "her her her new new" "her her her new new" "num num num num num";
   }
   .hero_content {
@@ -515,17 +532,18 @@ a {
     gap: 0;
   }
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 915px) {
   .container_content {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
     grid-template-areas: "her her" "new num";
+  }
+  .hero_content_desc_text {
+    max-width: 600px;
   }
 }
 @media screen and (max-width: 740px) {
   .container_content {
     grid-template-columns: 1fr;
-    grid-template-rows: auto;
     grid-template-areas: "her" "new" "num";
   }
 }
