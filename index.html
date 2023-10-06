@@ -17,7 +17,10 @@
     <nav class="navbar">
       <div class="container container_navbar">
         <img src="assets/images/logo.svg" alt="logo" class="navbar_logo">
-        <img src="assets/images/icon-menu.svg" alt="menu" class="navbar_hamburger">
+        <div class="navbar_hamburger">
+          <img src="assets/images/icon-menu.svg" alt="menu" class="navbar_hamburger_icon navbar_hamburger_lines" id="navbar_hamburger_lines">
+          <img src="assets/images/icon-menu-close.svg" alt="menu" class="navbar_hamburger_icon navbar_hamburger_cross" id="navbar_hamburger_cross">
+        </div>
         <ul class="navbar_menu">
           <li class="navbar_menu_item">
             <a href="#" class="navbar_menu_item_link">Home</a>
@@ -158,5 +161,7 @@
         </section>
       </div>
     </main>
+    
+    <script src="./script/main.js"></script>
   </body>
 </html>

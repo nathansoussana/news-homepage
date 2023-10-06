@@ -408,11 +408,22 @@ a {
     line-height: 40px;
   }
 }
+.navbar {
+  background: #FFFDFA;
+}
+
+.navbar.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
 .container_navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 32px 16px;
+  height: 58px;
 }
 
 .navbar_menu {
@@ -423,16 +434,20 @@ a {
   margin-left: 40px;
 }
 
-.navbar_hamburger {
+.navbar_hamburger_icon {
   display: none;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 600px) {
   .navbar_menu {
     display: none;
   }
-  .navbar_hamburger {
+  .navbar_hamburger_lines {
     display: block;
+  }
+  .navbar_hamburger_cross {
+    display: none;
   }
 }
 .container_content {
@@ -441,10 +456,15 @@ a {
   grid-template-rows: auto;
   grid-template-areas: "her her new" "her her new" "her her new" "num num num";
   gap: 60px 30px;
+  margin-top: 122px;
 }
 
 .hero {
   grid-area: her;
+}
+
+.hero_img {
+  object-fit: cover;
 }
 
 .hero_content {
@@ -545,6 +565,9 @@ a {
   .container_content {
     grid-template-columns: 1fr;
     grid-template-areas: "her" "new" "num";
+  }
+  .hero_img {
+    height: 300px;
   }
 }
 

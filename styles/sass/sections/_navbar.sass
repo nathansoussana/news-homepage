@@ -1,10 +1,19 @@
 @use '../variables'
 
+.navbar
+  background: variables.$off-white
+
+.navbar.sticky
+  position: fixed
+  top: 0
+  width: 100%
+
 .container_navbar
   display: flex
   align-items: center
   justify-content: space-between
   padding: 32px 16px
+  height: 58px
 
 .navbar_menu
   display: flex
@@ -12,12 +21,29 @@
 .navbar_menu_item
   margin-left: 40px
 
-.navbar_hamburger
+.navbar_hamburger_icon
   display: none
+  cursor: pointer
+//   position: fixed
+//   z-index: 100
+//   padding: 16px
+  
+// .navbar_hamburger_lines
+//   top: 28px
+//   right: 0px
+
+// .navbar_hamburger_cross
+//   top: 22px
+//   right: 0px
 
 @media screen and (max-width: variables.$x-small)
   .navbar_menu
     display: none
 
-  .navbar_hamburger
+  .navbar_hamburger_icon
+    
+  .navbar_hamburger_lines
     display: block
+
+  .navbar_hamburger_cross
+    display: none
