@@ -412,12 +412,6 @@ a {
   background: #FFFDFA;
 }
 
-.navbar.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
 .container_navbar {
   display: flex;
   align-items: center;
@@ -456,7 +450,6 @@ a {
   grid-template-rows: auto;
   grid-template-areas: "her her new" "her her new" "her her new" "num num num";
   gap: 60px 30px;
-  margin-top: 122px;
 }
 
 .hero {
