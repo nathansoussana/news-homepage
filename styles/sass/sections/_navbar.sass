@@ -2,6 +2,10 @@
 
 .navbar
   background: variables.$off-white
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
 
 .container_navbar
   display: flex
@@ -16,29 +20,9 @@
 .navbar_menu_item
   margin-left: 40px
 
-.navbar_hamburger_icon
-  display: none
-  cursor: pointer
-//   position: fixed
-//   z-index: 100
-//   padding: 16px
-  
-// .navbar_hamburger_lines
-//   top: 28px
-//   right: 0px
-
-// .navbar_hamburger_cross
-//   top: 22px
-//   right: 0px
-
-@media screen and (max-width: variables.$x-small)
+@media all and (max-width: variables.$small)
   .navbar_menu
-    display: none
-
-  .navbar_hamburger_icon
-    
-  .navbar_hamburger_lines
-    display: block
-
-  .navbar_hamburger_cross
-    display: none
+    flex-direction: column
+    background: variables.$off-white
+    gap: 20px
+    z-index: 10
