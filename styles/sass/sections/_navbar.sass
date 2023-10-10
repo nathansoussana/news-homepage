@@ -20,9 +20,61 @@
 .navbar_menu_item
   margin-left: 40px
 
-@media all and (max-width: variables.$small)
+.navbar_icons
+  cursor: pointer
+  
+.navbar_icons_hamburger
+  display: none
+  z-index: 100
+
+.navbar_icons_cross
+  display: none
+  z-index: 100
+
+@media all and (max-width: variables.$x-small)
   .navbar_menu
     flex-direction: column
     background: variables.$off-white
-    gap: 20px
+    position: fixed
+    inset: 0 0 0 30%
+    gap: 24px
+    padding-top: 144px
+    margin: 0
     z-index: 10
+    transform: translateX(100%)
+    transition: 0.35s ease-in-out
+
+  .navbar_menu_active
+    transform: translateX(0%)
+
+  .navbar_menu_item
+    margin-left: 24px
+    
+  .navbar_menu_item_link
+    color: variables.$space-blue
+    font-size: 18px
+    line-height: 24px
+
+    &:hover
+      color: variables.$light-red
+
+  .navbar_icons_hamburger
+    display: block
+    position: absolute
+    right: 16px
+    top: 52px
+
+  .navbar_icons_hamburger_active
+    display: none
+
+  .navbar_icons_cross
+    display: none
+    position: absolute
+    right: 16px
+    top: 44px
+
+  .navbar_icons_cross_active
+    display: block
+
+    
+  
